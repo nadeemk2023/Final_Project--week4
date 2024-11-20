@@ -36,3 +36,5 @@ _This project will be very basic to complete the goals required of me but will b
   - What is even available as the search methods for the API I will be using from their documentation?
 - Will I need to use local storage for any persistent data that I can think of at the moment?
 - What kind of websites will I use for visualizing functionality and UX?
+- How do I link icons so I can use them within my HTML?
+- What kind of typography should I employ?
