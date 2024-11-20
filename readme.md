@@ -38,3 +38,13 @@ _This project will be very basic to complete the goals required of me but will b
 - What kind of websites will I use for visualizing functionality and UX?
 - How do I link icons so I can use them within my HTML?
 - What kind of typography should I employ?
+
+# Answers to questions
+
+- I will be employing the [OMDb API](https://www.omdbapi.com/), which is an open movie database
+
+  - I have gained access by creating an account and sending a request to their free API Key form
+  - I have verified the key as working
+  - An example of the database break down of data available for a movie is:
+    ![alt text](image.png)
+  -
