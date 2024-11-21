@@ -81,6 +81,7 @@ _This project will be very basic to complete the goals required of me but will b
     - A container that will house the top rated movies overall
   - Movie Page
     - This page is intended to be the movie page for a selected movie from a user when they click on a movie card from their search results
+      - The user will navigated to the `movie-details` page which will dynamically fetch data and transition rendering on this page accordingly
     - The details to be rendered are already listed above
     - Will also add a back to home page button
 - Search Engine
@@ -98,3 +99,31 @@ _This project will be very basic to complete the goals required of me but will b
   - Roboto for the main text
 - CSS Variables
   - Per W3 Schools Variables are initialized within the ::root selector and then later can be invoked within CSS declarations with the var(--variableNameHere) syntax
+
+# Make A Plan
+
+### Phases Overview
+
+- Phase 1
+  - Set up folder structure, basic HTML pages, and basic CSS layout styling
+  - Fetch and render data using OMDb API with a static search term to test
+- Phase 2
+  - Create `index.html` with a functional search with placeholder for search results
+  - Build `top-rated.html` with a container to render dummy cards for testing layout
+  - Develop `movie-details.html` with a placeholder layout for the expanded view layout when a user selects a movie
+- Phase 3
+  - Implement search functionality linked to OMDb with search input from user on homepage
+  - Dynamically load "Top Rated" movies and render movies cards on `top-rated.html`
+  - Also enable these to be a simliar movie card so that when the user clicks on these cards they are navigated to `movie-details.html` with data passed through local storage
+- Phase 4
+  - Declare CSS variables to create consistent themes/styles throughout all webpages
+  - Add responsive design for mobile/tablet screens
+  - Ensure typography is working correctly through elements
+    - Kanit for titles
+    - Roboto for rest
+- Phase 5 (Beyond MVP - MVP Is until phase 3)
+  - Add 'Add to watchlist' page where user can remove/add movies utilizing local storage since this project is written in vanilla JS
+  - Explore concept of adding more results being displayed to the search results for user along with adding pages to limit results per page
+  - Enhance search functionality to include genre, title, year, or even actors
+
+---
