@@ -128,13 +128,11 @@ _This project will be very basic to complete the goals required of me but will b
 
 ---
 
-```
-index.html
-```
+## `index.html`
 
 ### Purpose
 
-The homepage will be the primary hub for the user to search movies. I will try to keep it simple and clean with a focus on the search bar and rendering the search results.
+The homepage will be the primary hub for the user to search movies. I will try to keep it simple and clean with a focus on the search bar and rendering the search results. Along with the navigation bar and logo along the top of the web application.
 
 ### Features
 
@@ -142,3 +140,80 @@ The homepage will be the primary hub for the user to search movies. I will try t
 - **Search Results Container** - Container where the movie cards will render when a user searches
 - **Navigation Bar** - Links to Top Rated, Watchlist, Signin/Signout
 - **Footer** - Additional Information, copyright, and back-to-top button(possibly)
+
+### HTML Structuring
+
+- Logo/Brand with nav bar on opposite side with
+  - Top Rated
+  - Watchlist
+  - Signin/Signout
+- Search Form with input and submit button
+- Section for rendering search results
+- Footer, copyright, some navigation, and back-to-top button
+
+### `index.js`
+
+- Handle form submission
+- Fetch search results from OMDb API using movie title entered by user
+- Dynamically generate and render movie cards in the search results container on index.html
+
+## `movie-details.html`
+
+### Purpose
+
+This page will provided expanded details about a movie when a user clicks on a movie card
+
+### Features
+
+- Back button to return to the homepage
+- Display
+  - Movie Poster/Cover
+  - Title
+  - Year
+  - Genre
+  - Director
+  - Cast
+  - Plot
+  - IMDb rating
+  - Box Office info
+
+### HTML Structure
+
+- Test with placeholder details will need to render each of the above elements
+- Include a back button for user to navigate back to homepage with search
+  - Decide if keeping the search term in local storage or just a complete reset for UX
+
+### `movie-details.js`
+
+- Fetch movie data using the OMDb API by `IMDbID` stored in `local storage`
+- Populate page with selected movie data
+- Handle navigation back to previous page
+
+## `top-rated.html`
+
+### Purpose
+
+This page will show a list of the top rated movies based on overall rating within OMDb
+
+### Features
+
+- Layout with either flexbox or grid to display top 10 movie cards
+- Each card links to it's own movie-details page
+- Include navbar and footer
+
+### HTML Structure
+
+- Container that will hold the entire movie details
+- Within this container 2 children
+  - The first child will be the movie poster image
+  - The second child will be a container that holds all the information about the movie
+  - Handle navigation back to previous page
+
+### `top-rated.js`
+
+- Fetch top-rated movies (if API allows) or use hardcoded data
+- Render movies into top-rated movies container
+- Set up functionality to ensure each movie card links to the appropriate `movies-details.html` with the correct `IMDbID`
+- For this page We may need to switch to the [The Movie Database](https://developer.themoviedb.org/reference/movie-top-rated-list), which has an endpoint dedicated to listing movies directly by top rating which is not available as a search parameter in the OMDb API
+  - We will cross this bridge when we get to building this page & script
+  - I have already created an account and requested an API KEY from TMDB just in case I need this API down the line of developing this project
