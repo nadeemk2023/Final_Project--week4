@@ -105,7 +105,7 @@ _This project will be very basic to complete the goals required of me but will b
 ### Phases Overview
 
 - Phase 1
-  - Set up folder structure, basic HTML pages, and basic CSS layout styling
+  - ~~Set up folder structure, basic HTML pages~~, and basic CSS layout styling
   - Fetch and render data using OMDb API with a static search term to test
 - Phase 2
   - Create `index.html` with a functional search with placeholder for search results
@@ -127,3 +127,18 @@ _This project will be very basic to complete the goals required of me but will b
   - Enhance search functionality to include genre, title, year, or even actors
 
 ---
+
+```
+index.html
+```
+
+### Purpose
+
+The homepage will be the primary hub for the user to search movies. I will try to keep it simple and clean with a focus on the search bar and rendering the search results.
+
+### Features
+
+- **Search Input** - A form with a single search field and submit button
+- **Search Results Container** - Container where the movie cards will render when a user searches
+- **Navigation Bar** - Links to Top Rated, Watchlist, Signin/Signout
+- **Footer** - Additional Information, copyright, and back-to-top button(possibly)
