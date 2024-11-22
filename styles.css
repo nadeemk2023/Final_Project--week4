@@ -5,10 +5,12 @@
     --lightblue: #507687;
     --white: #FCFAEE;
     --red: #B8001F;
+    --main-font: 'Roboto', sans-serif;
+    --heading-font: 'Kanit', sans-serif;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--main-font);
     background-color: var(--darkblue);
     color: var(--white);
     margin: 0;
@@ -19,4 +21,44 @@ body {
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*
+
+Navigation
+
+*/
+
+
+.nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+}
+
+.nav__links {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--lightblue)
+}
+
+.logo {
+    max-height: 80px;
 }
