@@ -43,6 +43,9 @@ a {
     letter-spacing: 1.5px;
 }
 
+p {
+    margin: 0;
+}
 
 /*
 
@@ -174,4 +177,6 @@ Footer
 .footer__text {
     text-align: center;
     font-size: 12px;
+    margin-bottom: 8px;
+    line-height: 1.5;
 }
