@@ -87,7 +87,6 @@ Navigation
     justify-content: space-between;
     padding: 0 20px;
     position: relative;
-    margin-top: -20px;
 }
 
 .nav__links {
@@ -109,9 +108,13 @@ Navigation
     align-items: center;
 }
 
+.home__btn {
+    line-height: 0;
+}
+
 .logo {
     height: 100%;
-    max-height: 100px;
+    max-width: 150px;
 }
 
 /*
