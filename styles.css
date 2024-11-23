@@ -94,6 +94,7 @@ Search
     margin: 0 auto;
     text-align: center;
     max-width: 500px;
+    height: 40vh;
 }
 
 
@@ -161,4 +162,16 @@ Results
 
 .results__title {
     text-align: center;
+    height: 100vh;
+}
+
+/*
+
+Footer
+
+*/
+
+.footer__text {
+    text-align: center;
+    font-size: 12px;
 }
