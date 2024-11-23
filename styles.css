@@ -38,6 +38,11 @@ a {
     cursor: pointer;
 }
 
+.title {
+    font-family: var(--heading-font);
+    letter-spacing: 1.5px;
+}
+
 
 /*
 
@@ -93,8 +98,6 @@ Search
 
 
 .search__title {
-    font-family: var(--heading-font);
-    letter-spacing: 1px;
     margin-bottom: 20px;
     font-size: 36px;
     line-height: 1;
@@ -102,23 +105,60 @@ Search
 
 .search__para {
     font-size: 18px;
-    margin-top: 0;
+    margin: 24px 0;
+    line-height: 1.5;
 }
 
 #search__form {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 .search__input {
     width: 75%;
-    border-radius: 20px;
     height: 56px;
-    border: 1px solid #000
+    border-radius: 20px;
+    border: 1px solid #000;
+    text-align: center;
+    transition: border-color 0.3s ease, textalign 0.3s ease;
+    font-size: 20px;
 }
 
 .search__input::placeholder {
     text-align: center;
     font-size: 20px;
     color: var(--lightblue);
+}
+
+.search__input:focus {
+    outline: none;
+    border: 2px solid var(--lightblue);
+    color: var(--lightblue);
+    font-size: 20px;
+}
+
+.search__button--container {
+    height: 56px;
+    width: 56px;
+    background-color: transparent;
+    border: 2px solid var(--white);
+    border-radius: 16px;
+}
+
+.search__button--icon {
+    color: var(--white);
+    font-size: 40px;
+    border-radius: 16px;
+}
+
+/*
+
+Results
+
+*/
+
+.results__title {
+    text-align: center;
 }

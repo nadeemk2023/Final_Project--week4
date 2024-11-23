@@ -25,7 +25,7 @@
     </section>
     <!-- Search section -->
     <section id="search" class="search__section">
-      <h1 class="search__title">Find your favorite movies</h1>
+      <h1 class="title search__title">Find your favorite movies</h1>
       <p class="search__para">
         Search through our database to find detailed information about your
         favorite movies
@@ -39,15 +39,21 @@
           class="search__input"
           required
         />
-        <button type="submit">Search</button>
+        <button type="submit" class="search__button--container">
+          <i class="fa-solid fa-magnifying-glass search__button--icon"></i>
+        </button>
       </form>
       <!-- End Search section -->
     </section>
     <!-- Search Results Section -->
     <section id="search-results" class="results__section">
-      <h2 class="results__title">Search Results:</h2>
+      <h2 class="title results__title">Search Results:</h2>
       <div class="results-container"></div>
       <!-- End Results Section -->
     </section>
+    <script
+      src="https://kit.fontawesome.com/c9693440ec.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
