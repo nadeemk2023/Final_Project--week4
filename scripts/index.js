@@ -9,7 +9,9 @@ async function getMovie(event) {
 
   const movies = await fetch(`${API_URL}s=${title}`);
   const moviesJson = await movies.json();
-  const moviesData = moviesJson.Search;
+  const moviesData = moviesJson.Search.filter(movie => movie.Type === 'movie');
+
+  console.log(moviesData);
 
   inputField.value = '';
 
