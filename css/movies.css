@@ -1,0 +1,26 @@
+.movie {
+    width: calc(100% / 3 - 48px);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.movie__info {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.movie__info--title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.25px;
+    margin: 4px 0;
+}
+
+
+.movie__img {
+    border-radius: 8px;
+}

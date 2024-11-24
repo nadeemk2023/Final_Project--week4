@@ -14,6 +14,7 @@ async function getTopRatedMovies() {
   } catch (error) {
     console.error('Error fetching data: ', error);
   }
+  englishMovies.sort((a, b) => b.vote_average - a.vote_average);
   movieList.innerHTML = englishMovies
     .map(
       movie =>
