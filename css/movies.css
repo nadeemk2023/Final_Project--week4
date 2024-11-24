@@ -3,6 +3,7 @@
     background-color: rgb(252, 250, 238, 0.8);
     border-radius: 8px;
     overflow: hidden;
+    transition: transform 0.3s ease, border 0.3s ease;
 }
 
 img {
@@ -22,4 +23,9 @@ img {
     font-size: 18px;
     margin: 4px 0;
     color: #384B70;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+    border: 3px solid rgb(184, 0, 31);
 }
