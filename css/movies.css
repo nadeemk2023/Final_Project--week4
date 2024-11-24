@@ -23,7 +23,10 @@
 }
 
 .movie__info {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-bottom: 8px;
     font-size: 14px;
     color: #507687;
@@ -35,6 +38,7 @@
     font-size: 18px;
     margin: 4px 0;
     color: #384B70;
+    text-align: center;
 }
 
 .movie:hover {
