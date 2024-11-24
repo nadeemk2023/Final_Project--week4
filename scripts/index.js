@@ -11,8 +11,6 @@ async function getMovie(event) {
   const moviesJson = await movies.json();
   const moviesData = moviesJson.Search.filter(movie => movie.Type === 'movie');
 
-  console.log(moviesData);
-
   inputField.value = '';
 
   resultsContainerEl.innerHTML = moviesData
