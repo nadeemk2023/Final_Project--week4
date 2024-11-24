@@ -5,12 +5,28 @@ const inputField = document.querySelector('#search__input');
 
 async function getMovie(event) {
   event.preventDefault();
-  let title = inputField.value;
+  const title = inputField.value;
 
   const movies = await fetch(`${API_URL}s=${title}`);
   const moviesJson = await movies.json();
   const moviesData = moviesJson.Search;
 
   inputField.value = '';
-  console.log(moviesData);
+
+  resultsContainerEl.innerHTML = moviesData
+    .map(
+      movie => `
+    <div class="movie">
+        <img src="${movie.Poster}" alt="${movie.Title}" class="movie__img"/>
+        <div class="movie__info">
+          <div>
+            <h3 class="movie__info--title">${movie.Title}</h3>
+          </div>
+          <div class="movie__info--released">
+            <p>Released: ${movie.Year}</p>
+          </div>
+        </div>
+      </div>`
+    )
+    .join('');
 }
