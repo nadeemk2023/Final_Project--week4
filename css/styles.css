@@ -76,6 +76,10 @@ a:visited {
     cursor: pointer;
 }
 
+.not__allowed {
+    cursor: not-allowed;
+}
+
 /*
 
 Navigation
