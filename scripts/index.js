@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const previousSearch = localStorage.getItem('search');
   if (previousSearch) {
     inputField.value = previousSearch;
+    resetSearchEl.style.display = 'block';
     getMovies(null, previousSearch);
   }
 });
@@ -46,12 +47,6 @@ function showMovieDetails(imdbId) {
   window.location.href = `${window.location.origin}/movie-details.html`;
 }
 
-function resetSearch() {
-  localStorage.removeItem('search');
-  localStorage.removeItem('imdbId');
-  window.location.href = `${window.location.origin}/index.html`;
-}
-
 inputField.addEventListener('input', () => {
   if (inputField.value === '') {
     resetSearchEl.style.display = 'none';
@@ -59,3 +54,13 @@ inputField.addEventListener('input', () => {
     resetSearchEl.style.display = 'block';
   }
 });
+
+function resetSearch() {
+  inputField.value = '';
+  resultsContainerEl.innerHTML = '';
+
+  localStorage.removeItem('search');
+  localStorage.removeItem('imdbId');
+
+  resetSearchEl.style.display = 'none';
+}
