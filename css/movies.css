@@ -1,3 +1,45 @@
+#movie-details {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie__details--img {
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.movie__details--info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie__details--title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 8px;
+    letter-spacing: 1.5px;
+}
+
+.back__btn--container {
+    display: flex;
+    margin-left: 16px;
+}
+
+.back__btn {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: var(--darkblue);
+
+    &:hover {
+        background-color: var(--red);
+        color: var(--white);
+        cursor: pointer;
+    }
+}
+
 .results-container {
     flex-wrap: wrap;
     display: flex;

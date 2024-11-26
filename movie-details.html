@@ -8,17 +8,38 @@
     <title>Movie Details</title>
   </head>
   <body>
+    <nav>
+      <div class="nav__container">
+        <figure class="logo__wrapper">
+          <a href="/index.html" class="home__btn">
+            <img
+              src="./assets/FlixSearchLogobmp--transparent.bmp"
+              alt="logo"
+              class="logo"
+            />
+          </a>
+        </figure>
+        <ul class="nav__links">
+          <li><a class="nav__link" href="/top-rated.html">Top Rated</a></li>
+          <li><a class="nav__link not__allowed">Watchlist</a></li>
+          <li><a class="nav__link not__allowed">Sign in</a></li>
+        </ul>
+      </div>
+    </nav>
+    <a href="/index.html" class="back__btn--container">
+      <button class="back__btn">← Back to Search Results</button>
+    </a>
     <section id="movie-details">
       <div class="movie__details--container">
         <div class="movie__details-img-container">
           <img
             src="https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._V1_SX300.jpg"
             alt="movie poster"
-            class="movie__details-img"
+            class="movie__details--img"
           />
         </div>
         <div class="movie__details--info-container">
-          <h2>Movie Title</h2>
+          <h2 class="movie__details--title">Movie Title</h2>
           <p class="movie__details">Rated:</p>
           <p class="movie__details">Released:</p>
           <p class="movie__details">Runtime:</p>
@@ -43,5 +64,7 @@
         Designed by Nadeem Khan
       </p>
     </footer>
+    <!-- <script type="module" src="/scripts/index.js"></script> -->
+    <script src="/scripts/movie-details.js"></script>
   </body>
 </html>
