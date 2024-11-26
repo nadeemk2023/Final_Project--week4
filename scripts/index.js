@@ -35,6 +35,7 @@ function movieHTML(movie) {
 }
 
 function showMovieDetails(imdbId) {
-  console.log(imdbId, 'clicked');
-  window.location.href = `${window.location.origin}/movie-details.html`;
+  localStorage.setItem('imdbId', imdbId);
+  // window.location.href = `${window.location.origin}/movie-details.html`;
+  // the above redirect works but is commented out for now because I am still building the movie details page and testing issues on this page still
 }
