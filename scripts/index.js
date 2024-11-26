@@ -49,4 +49,5 @@ function showMovieDetails(imdbId) {
 
 function resetSearch() {
   localStorage.removeItem('search');
+  localStorage.removeItem('imdbId');
 }

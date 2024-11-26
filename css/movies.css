@@ -47,6 +47,7 @@ strong {
 .back__btn--container {
     display: flex;
     margin-left: 16px;
+    margin-top: 24px;
 }
 
 .back__btn {
