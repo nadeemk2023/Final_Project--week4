@@ -3,9 +3,10 @@ const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&`;
 const resultsContainerEl = document.querySelector('.results-container');
 const inputField = document.querySelector('#search__input');
 
-async function getMovie(event) {
+async function getMovies(event) {
   event.preventDefault();
   const title = inputField.value;
+  localStorage.setItem('search', title);
 
   const movies = await fetch(`${API_URL}s=${title}`);
   const moviesJson = await movies.json();
@@ -14,9 +15,13 @@ async function getMovie(event) {
   inputField.value = '';
 
   resultsContainerEl.innerHTML = moviesData
-    .map(
-      movie => `
-    <div class="movie">
+    .map(movie => movieHTML(movie))
+    .join('');
+}
+
+function movieHTML(movie) {
+  return `
+  <div class="movie" onclick="showMovieDetails('${movie.imdbID}')">
         <img src="${movie.Poster}" alt="${movie.Title}" class="movie__img"/>
         <div class="movie__info">
           <div>
@@ -26,7 +31,10 @@ async function getMovie(event) {
             <p>Released: ${movie.Year}</p>
           </div>
         </div>
-      </div>`
-    )
-    .join('');
+      </div>`;
+}
+
+function showMovieDetails(imdbId) {
+  console.log(imdbId, 'clicked');
+  window.location.href = `${window.location.origin}/movie-details.html`;
 }
