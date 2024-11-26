@@ -149,6 +149,7 @@ Search
 }
 
 #search__form {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,6 +177,21 @@ Search
     border: 2px solid var(--red);
     color: var(--lightblue);
     font-size: 20px;
+}
+
+.search__reset-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22%;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s ease;
+    font-size: 20px;
+
+    &:hover {
+        color: var(--red);
+    }
 }
 
 .search__button--container {

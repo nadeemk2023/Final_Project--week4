@@ -23,8 +23,6 @@ async function getMovies(event, searchTerm = null) {
   resultsContainerEl.innerHTML = moviesData
     .map(movie => movieHTML(movie))
     .join('');
-
-  if (!searchTerm) inputField.value = '';
 }
 
 function movieHTML(movie) {
@@ -50,4 +48,5 @@ function showMovieDetails(imdbId) {
 function resetSearch() {
   localStorage.removeItem('search');
   localStorage.removeItem('imdbId');
+  window.location.href = `${window.location.origin}/index.html`;
 }
