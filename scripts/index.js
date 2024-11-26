@@ -57,7 +57,9 @@ inputField.addEventListener('input', () => {
 
 function resetSearch() {
   inputField.value = '';
-  resultsContainerEl.innerHTML = '';
+  resultsContainerEl.innerHTML = `<p class="results__placeholder">
+    No Results Found. Please search for a movie.
+  </p>`;
 
   localStorage.removeItem('search');
   localStorage.removeItem('imdbId');
