@@ -4,6 +4,13 @@
     margin: 0 auto;
 }
 
+.movie__details--container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 24px;
+}
+
 .movie__details--img {
     max-width: 300px;
     border-radius: 8px;
@@ -12,14 +19,25 @@
 .movie__details--info-container {
     display: flex;
     flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.movie__details {
+    max-width: 600px;
 }
 
 .movie__details--title {
-    text-align: center;
     font-size: 2rem;
-    margin-top: 8px;
+    margin: 8px 0;
     letter-spacing: 1.5px;
+    width: 100%;
 }
+
+.movie__details--plot {
+    text-align: justify;
+}
+
 
 .back__btn--container {
     display: flex;
