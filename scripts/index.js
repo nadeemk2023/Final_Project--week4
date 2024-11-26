@@ -2,6 +2,7 @@ const API_KEY = `473f3fe0`;
 const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&`;
 const resultsContainerEl = document.querySelector('.results-container');
 const inputField = document.querySelector('#search__input');
+const resetSearchEl = document.querySelector('#search__reset-btn');
 
 window.addEventListener('DOMContentLoaded', () => {
   const previousSearch = localStorage.getItem('search');
@@ -50,3 +51,11 @@ function resetSearch() {
   localStorage.removeItem('imdbId');
   window.location.href = `${window.location.origin}/index.html`;
 }
+
+inputField.addEventListener('input', () => {
+  if (inputField.value === '') {
+    resetSearchEl.style.display = 'none';
+  } else {
+    resetSearchEl.style.display = 'block';
+  }
+});
