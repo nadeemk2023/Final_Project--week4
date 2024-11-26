@@ -16,8 +16,8 @@ function movieDetailsHTML(movie) {
   return `<div class="movie__details--container">
         <div class="movie__details-img-container">
           <img
-            src="https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._V1_SX300.jpg"
-            alt="movie poster"
+            src="${movie.Poster}"
+            alt="${movie.Title} Poster"
             class="movie__details--img"
           />
         </div>
