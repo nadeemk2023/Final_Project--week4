@@ -36,6 +36,11 @@
 
 .movie__details--plot {
     text-align: justify;
+    line-height: 1.5;
+}
+
+strong {
+    font-size: 18px;
 }
 
 
