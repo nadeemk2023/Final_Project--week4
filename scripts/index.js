@@ -3,20 +3,28 @@ const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&`;
 const resultsContainerEl = document.querySelector('.results-container');
 const inputField = document.querySelector('#search__input');
 
-async function getMovies(event) {
-  event.preventDefault();
-  const title = inputField.value;
+window.addEventListener('DOMContentLoaded', () => {
+  const previousSearch = localStorage.getItem('search');
+  if (previousSearch) {
+    inputField.value = previousSearch;
+    getMovies(null, previousSearch);
+  }
+});
+
+async function getMovies(event, searchTerm = null) {
+  if (event) event.preventDefault();
+  const title = searchTerm || inputField.value;
   localStorage.setItem('search', title);
 
   const movies = await fetch(`${API_URL}s=${title}`);
   const moviesJson = await movies.json();
   const moviesData = moviesJson.Search.filter(movie => movie.Type === 'movie');
 
-  inputField.value = '';
-
   resultsContainerEl.innerHTML = moviesData
     .map(movie => movieHTML(movie))
     .join('');
+
+  if (!searchTerm) inputField.value = '';
 }
 
 function movieHTML(movie) {
@@ -37,4 +45,8 @@ function movieHTML(movie) {
 function showMovieDetails(imdbId) {
   localStorage.setItem('imdbId', imdbId);
   window.location.href = `${window.location.origin}/movie-details.html`;
+}
+
+function resetSearch() {
+  localStorage.removeItem('search');
 }
