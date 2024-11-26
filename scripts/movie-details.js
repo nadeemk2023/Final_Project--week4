@@ -23,7 +23,7 @@ function movieDetailsHTML(movie) {
         </div>
         <div class="movie__details--info-container">
           <h2 class="movie__details--title">${movie.Title}</h2>
-          <p class="movie__details">Rated:</p>
+          <p class="movie__details">Rated: ${movie.Rated}</p>
           <p class="movie__details">Released:</p>
           <p class="movie__details">Runtime:</p>
           <p class="movie__details">Genre:</p>
