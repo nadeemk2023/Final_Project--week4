@@ -103,10 +103,24 @@ Navigation
 
 .nav__link {
     transition: color 0.3s ease;
+    position: relative;
 }
 
-.nav__link:hover {
-    color: var(--lightblue)
+
+
+.nav__link:after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--white);
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    transition: width 0.3s ease;
+}
+
+.nav__link:hover:after {
+    width: 100%;
 }
 
 .logo__wrapper {
