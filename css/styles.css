@@ -254,6 +254,7 @@ Results
     align-items: center;
     gap: 16px;
     padding: 16px;
+    flex-wrap: wrap;
 }
 
 .results__placeholder {

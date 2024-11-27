@@ -63,13 +63,6 @@ strong {
     }
 }
 
-.results-container {
-    flex-wrap: wrap;
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-}
-
 .movie {
     display: flex;
     flex-direction: column;
