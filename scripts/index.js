@@ -44,7 +44,7 @@ function movieHTML(movie) {
 
 function showMovieDetails(imdbId) {
   localStorage.setItem('imdbId', imdbId);
-  window.location.href = `${window.location.origin}/movie-details.html`;
+  window.location.href = `${window.location.origin}/Final_Project--week4/movie-details.html`;
 }
 
 inputField.addEventListener('input', () => {
