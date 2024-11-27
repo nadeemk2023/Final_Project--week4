@@ -126,6 +126,11 @@ Navigation
 .logo__wrapper {
     display: flex;
     align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.logo__wrapper:hover {
+    opacity: 0.6;
 }
 
 .home__btn {
