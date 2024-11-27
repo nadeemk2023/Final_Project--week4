@@ -1,5 +1,5 @@
 const API_KEY = `473f3fe0`;
-const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&`;
+const API_URL = `https://www.omdbapi.com/?apikey=${API_KEY}&`;
 const resultsContainerEl = document.querySelector('.results-container');
 const inputField = document.querySelector('#search__input');
 const resetSearchEl = document.querySelector('#search__reset-btn');
