@@ -50,7 +50,7 @@ function movieDetailsHTML(movie) {
           <p class="movie__details"><strong>Writer(s):</strong> ${Writer}</p>
           <p class="movie__details"><strong>Actors:</strong> ${Actors}</p>
           <p class="movie__details movie__details--plot"><strong>Plot:</strong> ${Plot}</p>
-          <p class="movie__details"><strong>Language:</strong>${Language}</p>
+          <p class="movie__details"><strong>Language:</strong> ${Language}</p>
           <p class="movie__details"><strong>Country:</strong> ${Country}</p>
           <p class="movie__details"><strong>Awards:</strong> ${Awards}</p>
           <p class="movie__details"><strong>Metascore:</strong> ${Metascore}</p>
