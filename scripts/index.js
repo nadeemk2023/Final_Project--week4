@@ -55,14 +55,20 @@ inputField.addEventListener('input', () => {
   }
 });
 
-function resetSearch() {
-  inputField.value = '';
+function clearResults() {
   resultsContainerEl.innerHTML = `<p class="results__placeholder">
-    No Results Found. Please search for a movie.
-  </p>`;
+  No Results Found. Please search for a movie.
+</p>`;
+}
 
+function clearSearchInput() {
+  inputField.value = '';
+  resetSearchEl.style.display = 'none';
+}
+
+function resetSearch() {
+  clearResults();
+  clearSearchInput();
   localStorage.removeItem('search');
   localStorage.removeItem('imdbId');
-
-  resetSearchEl.style.display = 'none';
 }
