@@ -46,8 +46,7 @@ strong {
 
 .back__btn--container {
     display: flex;
-    margin-left: 16px;
-    margin-top: 24px;
+    margin: 24px;
 }
 
 .back__btn {
@@ -62,13 +61,6 @@ strong {
         color: var(--white);
         cursor: pointer;
     }
-}
-
-.results-container {
-    flex-wrap: wrap;
-    display: flex;
-    gap: 16px;
-    justify-content: center;
 }
 
 .movie {
