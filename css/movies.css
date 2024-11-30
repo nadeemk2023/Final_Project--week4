@@ -83,12 +83,11 @@ strong {
 
 .movie__info {
     display: flex;
+    background-color: var(--lightblue);
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 8px;
     font-size: 14px;
-    color: #507687;
     height: 72px;
 }
 
@@ -96,7 +95,6 @@ strong {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     margin: 4px 0;
-    color: #384B70;
     text-align: center;
 }
 
