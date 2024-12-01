@@ -64,32 +64,17 @@ strong {
 }
 
 .movie {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: calc(100% / 3 - 48px);
-    background-color: rgb(252, 250, 238, 0.8);
-    border-radius: 8px;
+    position: relative;
+    width: 240px;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 12px;
+    cursor: pointer;
     overflow: hidden;
-    transition: transform 0.3s ease, border 0.3s ease;
 }
 
-.movie__img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    object-position: 0 20%;
-}
-
-.movie__info {
-    display: flex;
-    background-color: var(--lightblue);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 14px;
-    height: 72px;
-}
 
 .movie__info--title {
     font-family: 'Roboto', sans-serif;

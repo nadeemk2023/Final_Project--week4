@@ -29,8 +29,7 @@ async function getMovies(event, searchTerm = null) {
 
 function movieHTML(movie) {
   return `
-  <div class="movie" onclick="showMovieDetails('${movie.imdbID}')">
-        <img src="${movie.Poster}" alt="${movie.Title}" class="movie__img"/>
+  <div class="movie" onclick="showMovieDetails('${movie.imdbID}')" style="background-image: url('${movie.Poster}')">
         <div class="movie__info">
           <div>
             <h3 class="movie__info--title">${movie.Title}</h3>
