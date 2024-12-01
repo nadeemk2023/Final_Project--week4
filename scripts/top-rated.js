@@ -18,22 +18,19 @@ async function getTopRatedMovies() {
   movieList.innerHTML = englishMovies
     .map(
       movie =>
-        `<div class="movie">
-        <img src="${baseImgUrl + movie.poster_path}" alt="${
-          movie.title
-        }" class="movie__img"/>
-        <div class="movie__info">
-          <div>
-            <h3 class="movie__info--title">${movie.title}</h3>
-          </div>
-          <div class="movie__info--rating">
-            <p>Rating: ${movie.vote_average}</p>
-          </div>
-          <div class="movie__info--released">
-            <p>Released: ${movie.release_date}</p>
-          </div>
-        </div>
-      </div>`
+        `<div class="movie" onclick="showMovieDetails('${movie.id}')">
+      <div class="movie__bg" style="background-image: url(${baseImgUrl}${
+          movie.poster_path
+        })"></div>
+      <div class="movie__info">
+        <h3 class="movie__info--title">${movie.title}</h3>
+        <p class="movie__info--released">Released: ${movie.release_date}</p>
+        <p class="movie__info--rating">Rating: ${movie.vote_average.toFixed(
+          2
+        )}</p>
+        
+      </div>
+    </div>`
     )
     .join('');
 }
