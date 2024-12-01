@@ -100,7 +100,7 @@ strong {
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(100%);
-    padding: 0 4px;
+    padding: 0 8px;
 }
 
 .movie__info--title {
