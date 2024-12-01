@@ -29,16 +29,13 @@ async function getMovies(event, searchTerm = null) {
 
 function movieHTML(movie) {
   return `
-  <div class="movie" onclick="showMovieDetails('${movie.imdbID}')" style="background-image: url('${movie.Poster}')">
-        <div class="movie__info">
-          <div>
-            <h3 class="movie__info--title">${movie.Title}</h3>
-          </div>
-          <div class="movie__info--released">
-            <p>Released: ${movie.Year}</p>
-          </div>
-        </div>
-      </div>`;
+    <div class="movie" onclick="showMovieDetails('${movie.imdbID}')">
+      <div class="movie__bg" style="background-image: url(${movie.Poster})"></div>
+      <div class="movie__info">
+        <h3 class="movie__info--title">${movie.Title}</h3>
+        <p class="movie__info--released">Released: ${movie.Year}</p>
+      </div>
+    </div>`;
 }
 
 function showMovieDetails(imdbId) {
