@@ -94,9 +94,9 @@ strong {
     width: 100%;
     height: 20%;
     text-align: center;
-    background-color: rgba(inherit, inherit, inherit, 3);
+    background-color: rgba(inherit, inherit, inherit, 0.1);
     backdrop-filter: blur(8px);
-    color: #000;
+    color: #fff;
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(100%);
@@ -109,6 +109,8 @@ strong {
     font-size: 1.1rem;
     font-style: var(--heading-font);
     text-justify: justify;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #000;
 }
 
 
