@@ -64,7 +64,6 @@ strong {
 }
 
 .movie {
-    position: relative;
     width: 240px;
     height: 450px;
     background-size: cover;
@@ -73,6 +72,27 @@ strong {
     border-radius: 12px;
     cursor: pointer;
     overflow: hidden;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: all 0.3s ease;
+}
+
+.movie__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    color: #000;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(100%);
 }
 
 
@@ -80,10 +100,14 @@ strong {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     margin: 4px 0;
-    text-align: center;
 }
 
 .movie:hover {
     transform: scale(1.04);
     border: 3px solid rgb(184, 0, 31);
+}
+
+.movie:hover .movie__info {
+    opacity: 1;
+    transform: translateY(0);
 }
