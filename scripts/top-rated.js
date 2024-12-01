@@ -24,10 +24,11 @@ async function getTopRatedMovies() {
         })"></div>
       <div class="movie__info">
         <h3 class="movie__info--title">${movie.title}</h3>
-        <p class="movie__info--rating">Rating: ${movie.vote_average.toFixed(
-          1
-        )}</p>
         <p class="movie__info--released">Released: ${movie.release_date}</p>
+        <p class="movie__info--rating">Rating: ${movie.vote_average.toFixed(
+          2
+        )}</p>
+        
       </div>
     </div>`
     )

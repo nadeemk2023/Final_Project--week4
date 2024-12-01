@@ -28,7 +28,13 @@ header {
     margin-bottom: 50px;
 }
 
+.movie__info--released {
+    font-size: 0.9rem;
+}
 
+.movie__info--rating {
+    font-size: 0.8rem;
+}
 
 
 footer {
