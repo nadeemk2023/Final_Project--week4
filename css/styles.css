@@ -28,15 +28,8 @@ body {
     padding: 0;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-html,
-body {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
 }
-
 
 h1 {
     font-size: 36px;
@@ -91,7 +84,7 @@ Navigation
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
-    position: relative;
+    max-width: 1200px;
 }
 
 .nav__links {
@@ -104,8 +97,6 @@ Navigation
     transition: color 0.3s ease;
     position: relative;
 }
-
-
 
 .nav__link:after {
     content: "";
